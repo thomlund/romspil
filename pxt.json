@@ -1,5 +1,5 @@
 {
-    "name": "romspil",
+    "name": "rumspil",
     "description": "",
     "dependencies": {
         "device": "*",
