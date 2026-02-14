@@ -19,8 +19,10 @@ mp.onButtonEvent(mp.MultiplayerButton.A, ControllerButtonEvent.Pressed, function
         `, null, 50, 50)
 })
 mp.onControllerEvent(ControllerEvent.Connected, function (player2) {
-	
+    mySprite = mp.getPlayerBySprite(mp.getPlayerSprite(mySprite))
+    scene.cameraFollowSprite(mySprite)
 })
+let mySprite: mp.Player = null
 let projectile: Sprite = null
 mp.setPlayerSprite(mp.playerSelector(mp.PlayerNumber.One), sprites.create(assets.image`player`, SpriteKind.Player))
 mp.setPlayerSprite(mp.playerSelector(mp.PlayerNumber.Two), sprites.create(assets.image`player`, SpriteKind.Player))
